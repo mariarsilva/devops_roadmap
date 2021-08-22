@@ -11,7 +11,28 @@
     <li>Development: envolve o desenvolvimento e teste de aplicações.</li>
     <li>Operation: deployment e manutenção da aplicação.</li>
   </ul>
-  <h3>Conceitos de desenvolvimento de software</h3>
+  <h2>Conceitos de desenvolvimento de software:</h2>
+  <p>Tudo começa com uma aplicação. O time de desenvolvimento cria a aplicação com alguma tecnologia de stack, diversas linguagens de programação, ferramentas, etc. Eles terão um repositório para armazenar o código para que a equipe possa trabalhar no código. Um dos mais populares atualmente é o Git.</p>
+  <p>Você, enquanto devops não precisa criar o código da aplicação, mas precisa entender como os desenvolvedores trabalham com o código, qual workflow do Git está sendo usado e como a aplicação está configurada para se comunicar com os outros serviços, como os de bando de dados, além de conceitos de automatização de testes.</p>
+
+  <h2>Básico sobre sistema operacional e Linux:</h2>
+  <p>Feito o código ele precisa passar pelo deploy em algum servidor. Assim, precisamos de alguma infraestrutura: on premise servers ou cloud servers. Esses servidores precisam ser criados e configurados para executar nossas aplicações. Você, enquanto devops ficará responsável por preparar a infraestrutura para executar a aplicação e, como a maioria dos servidores de aplicação rodam em linux, é preciso alguns conhecimentos básicos. O terminal e linhas de comando serão muito utilizadas. Logo, é importante que se saiba sobre Shell Commands, sobre o sistema de arquivos do linux e sobre administração de servidores usando a ferramenta.</p>
+  <h3>Redes e Segurança:</h3>
+  <p>O devops precisará configurar firewall, abrir portas, saber mais sobre como IP e DNS funcionam. Não precisa de conhecimentos avançados, mas pelo menos o básico é importante, saber os conceitos o suficiente para prepará-los para uso, mas o gerenciamento dessas redes fica a cargo de outras áreas (sysadmin, segurança e redes).</p>
+
+  <h2>Containers:</h2>
+  <p>Containers são o padrão mais usado atualmente, fazendo com que o devops precise saber alguns conceitos sobre virtualização e containers e ser apto a administrar esses containers no servidor. Um dos mais populares atualmente é o Docker.</p>
+
+  <h2>CI/CD (Continuous Integration & Continous Delivery):</h2>
+  <p>De um lado, temos os desenvolvedores criando novas funcionalidades e consertando bugs e do outro lado temos o setor de Operações tratando da infraestrutura e dos servidores para rodar a aplicação. Agora, como disponibilizar essas novas ferramentas e resolução de bugs do time de desenvolvimento para o de operações para que estejam disponíveis ao usuário final? É aqui que entra uma das principais responsabilidades do devops, saber como fazer essa integração de forma contínua e automatizada.</p>
+  <h3>Construir automação e CI/CD:</h3>
+  <p>Primeiro, assim que uma feature é feita ou um bug é resolvido, precisamos testar e transformar num artefato (package app), num arquivo jar ou zip, para que possa ser feito o deploy. É aqui que entram as ferramentas de construção (build tools) e administração de pacotes (package manager). Algumas aplicações que fazem esse serviço: Maven e Gradle para aplicações java; npm para aplicações javascript. É preciso saber como essas aplicações funcionam. Posteriormente, como padrão atual em muitas empresas, será preciso construir uma imagem Docker e depois passado para o repositório do artefato, usando aplicações como Nexus ou Dockerhub. Não queremos fazer tudo isso manualmente, assim usaremos uma pipeline que faz esses passos em sequencia. Nisso entra a automação (build automation), com ferramentas como Jenkins (a mais popular), Github actions, Gitlab e Teamcity. Obviamente precisamos conectar esse repositório com Git. Tudo isso faz parte da integração contínua (CI). Depois de fazer o teste e o package é preciso fazer o deploy para o servidor, o que faz parte do processo de entrega contínua (CD). Assim, CI/CD é o cerne da atividade devops e como tal é preciso configurar todo o pipeline CI/CD. E esse pipeline é contínuo (novas ferramentas e consertos de bugs são feitos todo o tempo, sempre necessitando do CI/CD). </p>
+
+  <h2>Infraestrutura - Cloud Providers:</h2>
+  <p>Voltando a falar de infraestrutura. Atualmente as empresas estão usando infraestrutura virtualizada em nuvem ao invés de infraestrutura física. Isso é chamado de IaaS (Infraestructure as a Services), como AWS, Google Cloud e Microsoft Azure. Ajuda a reduzir custos e essas ferramentas provêm diversos serviços (load balancing, backup, clustering, segurança, etc.), porém vale lembrar que alguns desses serviços são específicos de certas plataformas.</p>
+
+  <h2>Container Orchestration:</h2>
+  <p></p>
   <main></main>
   <footer></footer>
 </body>
