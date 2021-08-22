@@ -35,7 +35,20 @@
   <p>Nossa aplicação irá rodar em containers que precisam ser administrados. Para pequenas aplicações, o Docker Swarm é suficiente, mas se você possui vários containers, como diversos microserviços, precisamos de uma ferramenta mais poderosa, como o Kubernetes. Assim, é importante saber como o Kubernetes funciona. </p>
 
   <h2>Monitoração</h2>
-  <p>Quando você tem dezenas ou centenas de containers rodando em Kubernetes e em diversos servidores. </p>
+  <p>Quando você tem dezenas ou centenas de containers rodando em Kubernetes e em diversos servidores, é preciso pensar em como melhorar a performance dessas aplicações. Assim, uma outra função do devops é monitorar a performance desse software para garantir que suas várias 'partes' estão funcionando e detectar os erros rapidamente. Ferramentas como Nagios e Prometheus são utilizadas para esse serviço.</p>
+
+  <h2>Infrastructure as a Code (IAAS)</h2>
+  <p>O ambiente de produção que falamos anteriormente (com administração de containers, servidores em nuvem e monitoramento) é um dos ambientes da nossa infraestrutura. Precisamos de outros ambientes além do ambiente de produção, precisamos de um ambiente de teste e um de desenvolvimento. Mas criar esses ambientes manualmente consome muito tempo e é passível de erros. Para automatizar esse processo devemos usar código para criar infraestrutura, além de configurá-la para rodar e 'deployar' nossa aplicação. Para isso, usamos ferramentas de provisão de infraestrutura, como Terraform, além de ferramentas de administração das configurações (Ansible, Chef ou Puppet). É importante ao devops aprender algumas dessas ferramentas para uma infraestrutura mais eficiente e transparente e fácil de recuperar e replicar. </p>
+
+  <h2>Linguagens de Script:</h2>
+  <p>Se trabalhamos próximos aos desenvolvedores e sysadmins para automatizar algumas tarefas para elas, você irá precisar escrever scrips (pequenas aplicações para automatizar processos, como os de backup, administração de rede, monitoramento de systema e 'cron jobs'. Dessa forma, é importante conhecer alguma linguagem de scrip, como bash (linux, mac) ou powershell (windows), ou linguagens mais poderosas e com mais funcionalidades, como python, ruby ou go, que são independentes de sistemas operacional. Python é a mais popular e demandadas no devops, com muitas bibliotecas para bancos de dados (PostgreSQL, MySQL, Mongo) e suporte a vários cloud servers.</p>
+
+  <h2>Controle de Versão:</h2>
+  <p>Temos o código da aplicação em suas diversas versões, bem como toda a IAAS citada anteriormente (Terraform, Ansible, scripts em python, etc.), para armazenar esses códigos e suas versões de forma esquematizada e organizada, o devops precisa aprender a mexer com ferramentas de Git e seus repositórios, como o Github.</p>
+
+  <h2>Resumindo: ferramentas principais que você precisa aprender a usar:</h2>
+  <img src="dvps.png">
+
   <main></main>
   <footer></footer>
 </body>
